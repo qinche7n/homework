@@ -1,6 +1,6 @@
 package day05;
 
-public class work2 {
+public class Work2 {
     public static void main(String[] args) {
         NewStudent stu1 = new NewStudent("张三", 18, "男", 1);
         NewStudent stu2 = new NewStudent("李四",25,"女",2);
