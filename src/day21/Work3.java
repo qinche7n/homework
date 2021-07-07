@@ -1,11 +1,11 @@
-package day20;
+package day21;
 
 import java.io.IOException;
 import java.net.*;
 
-public class Sendpackage {
+public class Work3 {
     public static void main(String[] args) throws IOException {
-        String msg = "    ";
+        String msg = "同桌你好";
         DatagramSocket datagramSocket = new DatagramSocket(8888);
         byte[] bytes = msg.getBytes();
         InetAddress targetIP = InetAddress.getByName("192.168.8.33");

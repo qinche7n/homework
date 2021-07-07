@@ -1,7 +1,8 @@
 package day17;
 
+import day03.Array;
+
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class work3 {
@@ -12,19 +13,16 @@ public class work3 {
         File file = new File("new.txt");
         //创建输入流,输出流
         FileInputStream in = new FileInputStream(file);
-        FileOutputStream out = new FileOutputStream("new.txt",true);
+        FileOutputStream out = new FileOutputStream(file,true);
+
         //读取
         //数组排序
         //写入
         byte[] bytes = new byte[1024];
         int readCount;
-        //((readcount = InputStream.read(bytes)) != -1)
-        //((readCount = in.read(bytes)) != -1)
-        while ((readCount = in.read(bytes)) != -1){
-            Arrays.sort(bytes);
-            out.write(bytes,0,readCount);
-        }
-        //关闭两个流
+        readCount=in.read(bytes);
+        Arrays.sort(bytes,0,readCount);
+        out.write(bytes,0,readCount);
         in.close();
         out.close();
     }
